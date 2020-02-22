@@ -1,0 +1,8 @@
+---
+- hosts: TS   
+  become: true
+  tasks:
+  - name: Servers update
+    apt:  
+      upgrade: yes
+      update_cache: yes

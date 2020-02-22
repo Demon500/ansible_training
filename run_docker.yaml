@@ -1,0 +1,23 @@
+---
+- name: Run docker hello world image
+  hosts: TS
+  gather_facts: no   
+  become: true
+
+  tasks:
+  - name: Docker stoped 
+    docker_container:
+      name: hello-world
+      image: hello-world
+      state: stopped
+
+  - name: Check if container is running
+    shell: docker ps 
+
+  #- name: Docker started
+   # docker_container:
+   #   image: hello-world
+   #   state: started 
+
+  - name: Check lists
+    shell: docker image ls   

@@ -1,0 +1,15 @@
+---
+- name: Instaling nedded progs
+  hosts: TS   
+  become: true  
+  tasks:     
+  - name: Install mc htop 
+    apt: name={{ item }} state=present
+    with_items:
+      - "mc"
+      - "htop"
+      - "python-pip"
+   
+      
+    
+     
