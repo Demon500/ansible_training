@@ -1,1 +1,1 @@
-# "ansible_trainig"
+# "ansible_training"
