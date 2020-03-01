@@ -1,6 +1,6 @@
 ---
 - name: Install TomcatServer and Check
-- hosts: Server1
+  hosts: Server1
   become: yes
 
   tasks:
@@ -9,9 +9,9 @@
       upgrade: yes
       update_cache: yes
       cache_valid_time: 86400 #One day
-  - name: install JDK 11
+  - name: install JDK 9
     apt:
-      name: openjdk-11-jdk
+      name: openjdk-9-jdk
       state: present
 
   - name: add tomcat group
