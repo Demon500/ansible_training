@@ -9,9 +9,9 @@
       upgrade: yes
       update_cache: yes
       cache_valid_time: 86400 #One day
-  - name: install JDK 9
+  - name: install JDK 8
     apt:
-      name: openjdk-9-jdk
+      name: openjdk-8-jdk
       state: present
 
   - name: add tomcat group
@@ -33,7 +33,7 @@
 
   - name: download & unarchive
     unarchive:
-      src: http://apache.cs.utah.edu/tomcat/tomcat-9/v9.0.16/bin/apache-tomcat-9.0.16.tar.gz
+      src: http://apache.volia.net/tomcat/tomcat-9/v9.0.31/bin/apache-tomcat-9.0.31.tar.gz
       dest: /opt/tomcat
       remote_src: yes
       extra_opts: [--strip-components=1]
